@@ -1,1 +1,28 @@
+In computer science, Prim's (also known as Jarník's) algorithm is a greedy algorithm that finds a minimum spanning tree for
+a weighted undirected graph. This means it finds a subset of the edges that forms a tree that includes every vertex, where
+the total weight of all the edges in the tree is minimized.
 
+Problem Description
+A spanning tree of a graph can be defined as a graph with minimal set of edges that connect all vertices.
+A minimum spanning tree of a graph is a spanning tree of the graph with least weight
+(where the weight is computed by adding the weights of all the edges in the spanning tree).
+In general, a graph can have multiple minimum spanning trees. The problem is to find a minimum spanning tree of a graph.
+
+Problem Solution
+1. Create classes for Graph and Vertex.
+2. Create a function mst_prim that takes a Graph object g as argument.
+3. The function will return a Graph object which is a minimum spanning tree of the graph g.
+4. An empty graph called mst is created which will hold a MST of the graph g.
+5. The algorithm works by selecting any one vertex from g and adding it to mst.
+6. The vertex which is outside mst but has a neighbour in mst with the smallest distance is added to mst. (If there are multiple such vertices then add any one.)
+7. The corresponding edge is also added.
+8. The above two steps are repeated until all vertices have been added to the graph.
+9. Two dictionaries are used in the above algorithm.
+10. The nearest neighbour in mst of a vertex outside mst is kept track of using a dictionary nearest_neighbour.
+11. The corresponding smallest distance is stored in a dictionary called smallest_distance.
+
+Program Explanation
+1. An instance of Graph is created.
+2. A menu is presented to the user to perform various operations on the graph.
+3. mst_prim is called to get a minimum spanning tree of the graph.
+4. This is then displayed.
